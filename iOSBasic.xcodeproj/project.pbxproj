@@ -76,11 +76,7 @@
 		F148C427196E62C9007BF741 /* iOSBasic */ = {
 			isa = PBXGroup;
 			children = (
-				F148C428196E62C9007BF741 /* main.m */,
-				F148C42C196E62C9007BF741 /* iOSBasic.1 */,
-				F148C42A196E62C9007BF741 /* Supporting Files */,
-				F148C439196E6604007BF741 /* test.h */,
-				F148C43A196E6604007BF741 /* test.m */,
+				F148C43C196EA02B007BF741 /* Week1 */,
 			);
 			path = iOSBasic;
 			sourceTree = "<group>";
@@ -91,6 +87,18 @@
 				F148C42B196E62C9007BF741 /* iOSBasic-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F148C43C196EA02B007BF741 /* Week1 */ = {
+			isa = PBXGroup;
+			children = (
+				F148C428196E62C9007BF741 /* main.m */,
+				F148C42C196E62C9007BF741 /* iOSBasic.1 */,
+				F148C42A196E62C9007BF741 /* Supporting Files */,
+				F148C439196E6604007BF741 /* test.h */,
+				F148C43A196E6604007BF741 /* test.m */,
+			);
+			name = Week1;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
