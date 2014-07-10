@@ -59,11 +59,15 @@
 // 특정 경로에 해당 이름을 가진 파일의 존재 여부를 반환한다. (확장자 제외)
 - (BOOL) isExistFilename:(NSString*)filename atPath:(NSString*)path {
     NSArray *dirContents = [self WHAllFilesAtPath:path];
+    if ( [dirContents containsObject:filename] )
+        return YES;
+    /*
     for (NSString *each in dirContents) {
         if ([each isEqualToString:filename]) {
             return YES;
         }
     }
+     */
     
     return NO;
 }
@@ -132,14 +136,14 @@
 int main(int argc, const char * argv[])
 {
     NSString *path = @"/Users/Woonohyo/Documents/NEXT/5th/iOSBasic";
-    NSString *fileName = @"main";
+    NSString *fileName = @"maindummy";
     NSString *ext = @"m";
     NSArray *multiFileName = [NSArray arrayWithObjects:@"test", @"main", @"dummy",nil];
     Filemanager *fm = [[Filemanager alloc] init];
     
-    /*
+    
     // #1. 특정 경로 안의 모든 파일 출력.
-    [fm WHDisplayAllFilesAtPath:path];
+    [fm DisplayAllFilesAtPath:path];
     
     // #2. 특정 경로 안의 해당 파일 이름을 가진 파일이 존재하는지 판별.
     if([fm isExistFilename:fileName atPath:path])
@@ -150,17 +154,17 @@ int main(int argc, const char * argv[])
     {
         NSLog(@"File doesn't exist!");
     }
-     */
+    
     
     // 플러스미션 #1. 파일명 순서대로 정렬하기
-    //[fm sortDirContentsAtPath:path];
+    [fm sortDirContentsAtPath:path];
     
     // 플러스미션 #2. 파일명이 여러개일때 해당 경로에 각각에 대한 존재여부 출력하기
     [fm isExistsMultiFilename:multiFileName atPath:path];
     
     
     // 플러스미션 #3. 특정 확장자명을 가진 파일을 찾고, 있을 경우 해당 파일 목록 출력하기
-    //[fm WHDisplayFileAtPath:path withExt:ext];
+    [fm WHDisplayFileAtPath:path withExt:ext];
     
     
     return 0;
