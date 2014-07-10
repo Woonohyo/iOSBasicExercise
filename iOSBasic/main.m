@@ -37,7 +37,7 @@
 }
 
 // 특정 경로를 deep-search하여 파일의 이름만 가진 배열을 반환한다.
-- (NSArray*) AllFilesAtPath:(NSString*)path {
+- (NSArray *) AllFilesAtPath:(NSString*)path {
     fm = [[NSFileManager alloc] init];
     NSDirectoryEnumerator *dirEnum = [fm enumeratorAtPath:path];
     NSMutableArray *dirContents = [NSMutableArray array];
@@ -149,9 +149,19 @@ int main(int argc, const char * argv[])
     // 플러스미션 #1. 파일명 순서대로 정렬하기
     [fm sortDirContentsAtPath:path];
     
+    
     // 플러스미션 #2. 파일명이 여러개일때 해당 경로에 각각에 대한 존재여부 출력하기
     NSDictionary *multiFileResult = [fm isExistsMultiFilename:multiFileName atPath:path];
-    NSEnumerator *fileEnum = [multiFileResult keyEnumerator];
+    for ( NSString *each in multiFileName ) {
+        if ( [multiFileResult valueForKey:each] == [NSNumber numberWithBool:YES] ) {
+            NSLog(@"파일명:%@ 존재함.", each);
+        }
+        else
+        {
+            NSLog(@"파일명:%@ 존재하지 않음.", each);
+        }
+    }
+    
     
     // 플러스미션 #3. 특정 확장자명을 가진 파일을 찾고, 있을 경우 해당 파일 목록 출력하기
     [fm WHDisplayFileAtPath:path withExt:ext];
