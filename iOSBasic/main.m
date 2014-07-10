@@ -15,6 +15,7 @@
 - (BOOL) isExistFilename:(NSString*)filename
                   atPath:(NSString*)path;
 - (void) sortDirContentsAtPath:(NSString *)path;
+- (void) WHDisplayFileAtPath:(NSString *)path withExt:(NSString *)ext;
 
 @end
 
@@ -68,26 +69,31 @@
 - (void) sortDirContentsAtPath:(NSString *)path {
     NSArray *dirContents = [self WHAllFilesAtPath:path];
     
-    // integerValue로 비교하는 경우 생각대로 정렬이 되지 않고 있음.
-    /*
+    // comparator를 통해 정렬 구현
     dirContents = [dirContents sortedArrayUsingComparator:^(id obj1, id obj2) {
-        if ( [obj1 integerValue] > [obj2 integerValue]) {
+        if ([obj1 compare:obj2 options:NSCaseInsensitiveSearch] == NSOrderedDescending) {
             return (NSComparisonResult) NSOrderedDescending;
         }
-        if ( [obj1 integerValue] < [obj2 integerValue]) {
+        if ([obj1 compare:obj2 options:NSCaseInsensitiveSearch] == NSOrderedAscending) {
             return (NSComparisonResult) NSOrderedAscending;
         }
         
         return NSOrderedSame;
     }];
-     */
     
+    /*
     // selector를 통해 정렬 구현 완료
     dirContents = [dirContents sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+     */
     
     for (NSString *each in dirContents) {
         NSLog(@"%@", each);
     }
+}
+
+- (void) WHDisplayFileAtPath:(NSString *)path withExt:(NSString *)ext {
+    
+    return;
 }
 
 
