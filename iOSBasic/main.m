@@ -10,11 +10,13 @@
 
 @interface Filemanager : NSObject
 - (void) print;
-- (void) WHDisplayAllFilesAtPath:(NSString *) path;
-- (NSArray*) WHAllFilesAtPath:(NSString*) path;
-- (BOOL) isExistFilename:(NSString*)filename
-                  atPath:(NSString*)path;
+- (void) DisplayAllFilesAtPath:(NSString *) path;
+- (NSArray*) WHAllFilesAtPath:(NSString *) path;
+- (BOOL) isExistFilename:(NSString *)filename
+                  atPath:(NSString *)path;
 - (void) sortDirContentsAtPath:(NSString *)path;
+- (void) isExistsMultiFilename:(NSArray *) filenames
+                        atPath:(NSString *)path;
 - (void) WHDisplayFileAtPath:(NSString *)path withExt:(NSString *)ext;
 
 @end
@@ -28,7 +30,7 @@
 }
 
 // 특정 경로를 deep-search하여 경로를 포함한 파일의 이름 및 확장자명을 출력한다.
-- (void) WHDisplayAllFilesAtPath:(NSString *) path {
+- (void) DisplayAllFilesAtPath:(NSString *) path {
     fm = [[NSFileManager alloc] init];
     NSDirectoryEnumerator *dirEnum = [fm enumeratorAtPath:path];
     
@@ -92,10 +94,37 @@
 }
 
 - (void) WHDisplayFileAtPath:(NSString *)path withExt:(NSString *)ext {
+    fm = [[NSFileManager alloc] init];
+    NSDirectoryEnumerator *dirEnum = [fm enumeratorAtPath:path];
+    NSMutableArray *result = [NSMutableArray array];
+    
+    for (NSString *each in dirEnum) {
+        if ( [[each pathExtension] isEqualToString:ext]) {
+            [result addObject:[each lastPathComponent]];
+        }
+    }
+    
+    NSLog(@"확장자 %@을 가진 파일들의 목록을 출력합니다.", ext);
+    
+    for (NSString *each in result) {
+        NSLog(@"%@", each);
+    }
     
     return;
 }
 
+- (void) isExistsMultiFilename:(NSArray *)filenames atPath:(NSString *)path {
+    NSArray *dirContents = [self WHAllFilesAtPath:path];
+    
+    for (NSString *eachFilename in filenames) {
+        if ( [dirContents containsObject:eachFilename]) {
+            NSLog(@"%@라는 이름을 가진 파일은 존재합니다.", eachFilename);
+        }
+        else  {
+            NSLog(@"%@라는 이름을 가진 파일은 존재하지 않습니다.", eachFilename);
+        }
+    }
+}
 
 @end
 
@@ -104,6 +133,8 @@ int main(int argc, const char * argv[])
 {
     NSString *path = @"/Users/Woonohyo/Documents/NEXT/5th/iOSBasic";
     NSString *fileName = @"main";
+    NSString *ext = @"m";
+    NSArray *multiFileName = [NSArray arrayWithObjects:@"test", @"main", @"dummy",nil];
     Filemanager *fm = [[Filemanager alloc] init];
     
     /*
@@ -122,7 +153,15 @@ int main(int argc, const char * argv[])
      */
     
     // 플러스미션 #1. 파일명 순서대로 정렬하기
-    [fm sortDirContentsAtPath:path];
+    //[fm sortDirContentsAtPath:path];
+    
+    // 플러스미션 #2. 파일명이 여러개일때 해당 경로에 각각에 대한 존재여부 출력하기
+    [fm isExistsMultiFilename:multiFileName atPath:path];
+    
+    
+    // 플러스미션 #3. 특정 확장자명을 가진 파일을 찾고, 있을 경우 해당 파일 목록 출력하기
+    //[fm WHDisplayFileAtPath:path withExt:ext];
+    
     
     return 0;
 }
