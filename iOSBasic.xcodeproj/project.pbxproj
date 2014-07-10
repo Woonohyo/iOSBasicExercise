@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F148C426196E62C9007BF741 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F148C425196E62C9007BF741 /* Foundation.framework */; };
-		F148C429196E62C9007BF741 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F148C428196E62C9007BF741 /* main.m */; };
 		F148C42D196E62C9007BF741 /* iOSBasic.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = F148C42C196E62C9007BF741 /* iOSBasic.1 */; };
-		F148C43B196E6604007BF741 /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = F148C43A196E6604007BF741 /* test.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,11 +27,9 @@
 /* Begin PBXFileReference section */
 		F148C422196E62C9007BF741 /* iOSBasic */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = iOSBasic; sourceTree = BUILT_PRODUCTS_DIR; };
 		F148C425196E62C9007BF741 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		F148C428196E62C9007BF741 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F148C42B196E62C9007BF741 /* iOSBasic-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSBasic-Prefix.pch"; sourceTree = "<group>"; };
 		F148C42C196E62C9007BF741 /* iOSBasic.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = iOSBasic.1; sourceTree = "<group>"; };
-		F148C439196E6604007BF741 /* test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
-		F148C43A196E6604007BF741 /* test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = test.m; sourceTree = "<group>"; };
+		F148C43D196EA2D4007BF741 /* Week1 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Week1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +72,9 @@
 		F148C427196E62C9007BF741 /* iOSBasic */ = {
 			isa = PBXGroup;
 			children = (
-				F148C43C196EA02B007BF741 /* Week1 */,
+				F148C42C196E62C9007BF741 /* iOSBasic.1 */,
+				F148C42A196E62C9007BF741 /* Supporting Files */,
+				F148C43D196EA2D4007BF741 /* Week1 */,
 			);
 			path = iOSBasic;
 			sourceTree = "<group>";
@@ -87,18 +85,6 @@
 				F148C42B196E62C9007BF741 /* iOSBasic-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F148C43C196EA02B007BF741 /* Week1 */ = {
-			isa = PBXGroup;
-			children = (
-				F148C428196E62C9007BF741 /* main.m */,
-				F148C42C196E62C9007BF741 /* iOSBasic.1 */,
-				F148C42A196E62C9007BF741 /* Supporting Files */,
-				F148C439196E6604007BF741 /* test.h */,
-				F148C43A196E6604007BF741 /* test.m */,
-			);
-			name = Week1;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,8 +138,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F148C429196E62C9007BF741 /* main.m in Sources */,
-				F148C43B196E6604007BF741 /* test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
