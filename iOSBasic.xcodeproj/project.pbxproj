@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F148C426196E62C9007BF741 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F148C425196E62C9007BF741 /* Foundation.framework */; };
 		F148C42D196E62C9007BF741 /* iOSBasic.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = F148C42C196E62C9007BF741 /* iOSBasic.1 */; };
+		F17B2A9B19779FFD0006746A /* Week2.m in Sources */ = {isa = PBXBuildFile; fileRef = F17B2A9A19779FFD0006746A /* Week2.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,7 +31,8 @@
 		F148C42B196E62C9007BF741 /* iOSBasic-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSBasic-Prefix.pch"; sourceTree = "<group>"; };
 		F148C42C196E62C9007BF741 /* iOSBasic.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = iOSBasic.1; sourceTree = "<group>"; };
 		F148C43D196EA2D4007BF741 /* Week1 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Week1; sourceTree = "<group>"; };
-		F17B2A8D19779ED20006746A /* Week2 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Week2; sourceTree = "<group>"; };
+		F17B2A9919779FFD0006746A /* Week2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Week2.h; sourceTree = "<group>"; };
+		F17B2A9A19779FFD0006746A /* Week2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Week2.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +75,7 @@
 		F148C427196E62C9007BF741 /* iOSBasic */ = {
 			isa = PBXGroup;
 			children = (
-				F17B2A8D19779ED20006746A /* Week2 */,
+				F17B2A9819779FF50006746A /* Week2 */,
 				F148C42C196E62C9007BF741 /* iOSBasic.1 */,
 				F148C42A196E62C9007BF741 /* Supporting Files */,
 				F148C43D196EA2D4007BF741 /* Week1 */,
@@ -87,6 +89,15 @@
 				F148C42B196E62C9007BF741 /* iOSBasic-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F17B2A9819779FF50006746A /* Week2 */ = {
+			isa = PBXGroup;
+			children = (
+				F17B2A9919779FFD0006746A /* Week2.h */,
+				F17B2A9A19779FFD0006746A /* Week2.m */,
+			);
+			path = Week2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F17B2A9B19779FFD0006746A /* Week2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
