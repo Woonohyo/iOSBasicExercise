@@ -135,7 +135,7 @@
 
 @end
 
-
+/*
 int main(int argc, const char * argv[])
 {
     NSString *path = @"/Users/Woonohyo/Documents/NEXT/5th/iOSBasic";
@@ -181,3 +181,4 @@ int main(int argc, const char * argv[])
     
     return 0;
 }
+ */
