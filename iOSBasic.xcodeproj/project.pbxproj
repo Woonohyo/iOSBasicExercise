@@ -30,6 +30,7 @@
 		F148C42B196E62C9007BF741 /* iOSBasic-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSBasic-Prefix.pch"; sourceTree = "<group>"; };
 		F148C42C196E62C9007BF741 /* iOSBasic.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = iOSBasic.1; sourceTree = "<group>"; };
 		F148C43D196EA2D4007BF741 /* Week1 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Week1; sourceTree = "<group>"; };
+		F17B2A8D19779ED20006746A /* Week2 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Week2; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +73,7 @@
 		F148C427196E62C9007BF741 /* iOSBasic */ = {
 			isa = PBXGroup;
 			children = (
+				F17B2A8D19779ED20006746A /* Week2 */,
 				F148C42C196E62C9007BF741 /* iOSBasic.1 */,
 				F148C42A196E62C9007BF741 /* Supporting Files */,
 				F148C43D196EA2D4007BF741 /* Week1 */,
@@ -251,6 +253,7 @@
 				F148C432196E62C9007BF741 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
