@@ -10,6 +10,9 @@
 
 @interface JsonParser : NSObject
 - (id) MyJSONSerializationFrom:(NSString*)jsonData;
+- (NSInteger) MyJSONDistinguisher:(NSString*)jsonData;
 - (NSString*) MyJSONMakerWithArray:(NSArray*)array;
 - (NSString*) MyJSONMakerWithDictionary:(NSDictionary*)dictionary;
+- (NSString*) MyJsonTrimmer:(NSString*)jsonSrc;
+
 @end

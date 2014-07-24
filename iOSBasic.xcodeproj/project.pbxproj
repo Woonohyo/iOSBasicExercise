@@ -11,6 +11,8 @@
 		F148C42D196E62C9007BF741 /* iOSBasic.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = F148C42C196E62C9007BF741 /* iOSBasic.1 */; };
 		F17B2A9E1977A05A0006746A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F17B2A9D1977A05A0006746A /* main.m */; };
 		F17B2AA11977A0EB0006746A /* JsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F17B2AA01977A0EB0006746A /* JsonParser.m */; };
+		F17B2AA61980D7AE0006746A /* Week3.m in Sources */ = {isa = PBXBuildFile; fileRef = F17B2AA51980D7AE0006746A /* Week3.m */; };
+		F17B2AA91980D9A70006746A /* NumberPuzzle.m in Sources */ = {isa = PBXBuildFile; fileRef = F17B2AA81980D9A70006746A /* NumberPuzzle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +37,9 @@
 		F17B2A9D1977A05A0006746A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F17B2A9F1977A0EB0006746A /* JsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonParser.h; sourceTree = "<group>"; };
 		F17B2AA01977A0EB0006746A /* JsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonParser.m; sourceTree = "<group>"; };
+		F17B2AA51980D7AE0006746A /* Week3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Week3.m; sourceTree = "<group>"; };
+		F17B2AA71980D9A70006746A /* NumberPuzzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberPuzzle.h; sourceTree = "<group>"; };
+		F17B2AA81980D9A70006746A /* NumberPuzzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberPuzzle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +82,7 @@
 		F148C427196E62C9007BF741 /* iOSBasic */ = {
 			isa = PBXGroup;
 			children = (
+				F17B2AA31980D78A0006746A /* Week3 */,
 				F17B2A9819779FF50006746A /* Week2 */,
 				F148C42C196E62C9007BF741 /* iOSBasic.1 */,
 				F148C42A196E62C9007BF741 /* Supporting Files */,
@@ -101,6 +107,16 @@
 				F17B2AA01977A0EB0006746A /* JsonParser.m */,
 			);
 			path = Week2;
+			sourceTree = "<group>";
+		};
+		F17B2AA31980D78A0006746A /* Week3 */ = {
+			isa = PBXGroup;
+			children = (
+				F17B2AA51980D7AE0006746A /* Week3.m */,
+				F17B2AA71980D9A70006746A /* NumberPuzzle.h */,
+				F17B2AA81980D9A70006746A /* NumberPuzzle.m */,
+			);
+			path = Week3;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +170,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F17B2AA91980D9A70006746A /* NumberPuzzle.m in Sources */,
+				F17B2AA61980D7AE0006746A /* Week3.m in Sources */,
 				F17B2AA11977A0EB0006746A /* JsonParser.m in Sources */,
 				F17B2A9E1977A05A0006746A /* main.m in Sources */,
 			);
@@ -169,7 +187,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -207,7 +225,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;

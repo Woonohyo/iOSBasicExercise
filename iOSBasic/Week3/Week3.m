@@ -7,9 +7,41 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NumberPuzzle.h"
 
 int main(int argc, const char * argv[])
 {
-    NSLog(@"Welcome to Week3");
+    NumberPuzzle *numberPuzzle = [[NumberPuzzle alloc] init];
+    NSMutableArray *createdPuzzle = nil;
+    int numRows = 15;
+    
+    while ( numRows < 2 || numRows > 10 ) {
+        printf("Size of Puzzle?(2 ~ 10) ");
+        scanf("%d", &numRows);
+    }
+    
+    createdPuzzle = [numberPuzzle CreateNewPuzzle:numRows];
+    
+    printf("///New Puzzle Created///\n");
+    [numberPuzzle printCurrentStatus:createdPuzzle];
+    printf("///Shuffling...///\n");
+    [numberPuzzle shufflePuzzle:createdPuzzle];
+    [numberPuzzle printCurrentStatus:createdPuzzle];
+    
+    char userInput = 'a';
+    
+    while ( userInput != 'q') {
+        getchar();
+        printf("use 'WASD' to move you puzzle piece\n");
+        scanf("%c", &userInput);
+        [numberPuzzle movePiece:createdPuzzle withDirection:userInput];
+        
+        [numberPuzzle printCurrentStatus:createdPuzzle];
+    }
+    
+    [numberPuzzle release];
+    
+    printf("Bye Bye~\n");
+    
     return 0;
 }
