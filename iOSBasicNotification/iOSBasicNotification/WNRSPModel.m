@@ -11,10 +11,8 @@
 @implementation WNRSPModel
 - (void) randomize {
     NSNotificationCenter *notiCenter = [NSNotificationCenter defaultCenter];
-    int randomValue = arc4random() % 3;
-    NSLog(@"%d", randomValue);
     
-    NSNotification *RSPNoti = [NSNotification notificationWithName:@"RSPNoti" object:[NSNumber numberWithInt:randomValue]];
+    NSNotification *RSPNoti = [NSNotification notificationWithName:@"RSPNoti" object:[NSNumber numberWithInt:arc4random() % 3]];
     [notiCenter postNotification:RSPNoti];
 }
 @end
