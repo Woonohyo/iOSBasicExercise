@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F148C426196E62C9007BF741 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F148C425196E62C9007BF741 /* Foundation.framework */; };
 		F148C42D196E62C9007BF741 /* iOSBasic.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = F148C42C196E62C9007BF741 /* iOSBasic.1 */; };
-		F17B2A9E1977A05A0006746A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F17B2A9D1977A05A0006746A /* main.m */; };
+		F17B2A9E1977A05A0006746A /* Week2.m in Sources */ = {isa = PBXBuildFile; fileRef = F17B2A9D1977A05A0006746A /* Week2.m */; };
 		F17B2AA11977A0EB0006746A /* JsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F17B2AA01977A0EB0006746A /* JsonParser.m */; };
 		F17B2AA61980D7AE0006746A /* Week3.m in Sources */ = {isa = PBXBuildFile; fileRef = F17B2AA51980D7AE0006746A /* Week3.m */; };
 		F17B2AA91980D9A70006746A /* NumberPuzzle.m in Sources */ = {isa = PBXBuildFile; fileRef = F17B2AA81980D9A70006746A /* NumberPuzzle.m */; };
@@ -34,7 +34,7 @@
 		F148C42B196E62C9007BF741 /* iOSBasic-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSBasic-Prefix.pch"; sourceTree = "<group>"; };
 		F148C42C196E62C9007BF741 /* iOSBasic.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = iOSBasic.1; sourceTree = "<group>"; };
 		F148C43D196EA2D4007BF741 /* Week1 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Week1; sourceTree = "<group>"; };
-		F17B2A9D1977A05A0006746A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F17B2A9D1977A05A0006746A /* Week2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Week2.m; sourceTree = "<group>"; };
 		F17B2A9F1977A0EB0006746A /* JsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonParser.h; sourceTree = "<group>"; };
 		F17B2AA01977A0EB0006746A /* JsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonParser.m; sourceTree = "<group>"; };
 		F17B2AA51980D7AE0006746A /* Week3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Week3.m; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 		F17B2A9819779FF50006746A /* Week2 */ = {
 			isa = PBXGroup;
 			children = (
-				F17B2A9D1977A05A0006746A /* main.m */,
+				F17B2A9D1977A05A0006746A /* Week2.m */,
 				F17B2A9F1977A0EB0006746A /* JsonParser.h */,
 				F17B2AA01977A0EB0006746A /* JsonParser.m */,
 			);
@@ -173,7 +173,7 @@
 				F17B2AA91980D9A70006746A /* NumberPuzzle.m in Sources */,
 				F17B2AA61980D7AE0006746A /* Week3.m in Sources */,
 				F17B2AA11977A0EB0006746A /* JsonParser.m in Sources */,
-				F17B2A9E1977A05A0006746A /* main.m in Sources */,
+				F17B2A9E1977A05A0006746A /* Week2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

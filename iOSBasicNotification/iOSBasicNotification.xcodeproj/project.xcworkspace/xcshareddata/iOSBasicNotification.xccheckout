@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>83A2B944-CBF0-4A50-8A77-DD6CA062A72B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>iOSBasicNotification</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>AB22CC7D-B3A3-4734-9A9B-605163B1FE80</key>
+		<string>https://github.com/Woonohyo/iOSBasicExercise</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iOSBasicNotification/iOSBasicNotification.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>AB22CC7D-B3A3-4734-9A9B-605163B1FE80</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Woonohyo/iOSBasicExercise</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>AB22CC7D-B3A3-4734-9A9B-605163B1FE80</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>AB22CC7D-B3A3-4734-9A9B-605163B1FE80</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOSBasic</string>
+		</dict>
+	</array>
+</dict>
+</plist>
