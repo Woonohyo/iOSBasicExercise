@@ -50,20 +50,23 @@
     if ( [[noti name] isEqualToString:@"RSPNoti"] )
     {
         self.rspValue = [[noti object] integerValue];
-        
-        switch (self.rspValue) {
-            case 0:
-                [rspImageView setImage:[UIImage imageNamed:@"rock.png"]];
-                break;
-            case 1:
-                [rspImageView setImage:[UIImage imageNamed:@"scissors.png"]];
-                break;
-            case 2:
-                [rspImageView setImage:[UIImage imageNamed:@"paper.png"]];
-                break;
-            default:
-                break;
-        }
+        [self changeRSPImage];
+    }
+}
+
+- (void) changeRSPImage {
+    switch (self.rspValue) {
+        case 0:
+            [rspImageView setImage:[UIImage imageNamed:@"rock.png"]];
+            break;
+        case 1:
+            [rspImageView setImage:[UIImage imageNamed:@"scissors.png"]];
+            break;
+        case 2:
+            [rspImageView setImage:[UIImage imageNamed:@"paper.png"]];
+            break;
+        default:
+            break;
     }
 }
 
@@ -74,9 +77,6 @@
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
     if ( event.subtype == UIEventSubtypeMotionShake ) {
-    }
-    if ( [super respondsToSelector:@selector(motionEnded:withEvent:)] ) {
-        [super motionEnded:motion withEvent:event];
         [rspModel randomize];
     }
 }
@@ -86,6 +86,7 @@
     if ( [keyPath isEqualToString:@"rspValue"] ) {
         NSLog(@"KVO: rspValue Changed");
         NSLog(@"%@", [change valueForKey:@"new"]);
+        [self changeRSPImage];
     }
 }
 
