@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>83A2B944-CBF0-4A50-8A77-DD6CA062A72B</string>
+	<string>E596A1C1-D685-4D26-8B4E-95DA0E4E1297</string>
 	<key>IDESourceControlProjectName</key>
 	<string>iOSBasicNotification</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>AB22CC7D-B3A3-4734-9A9B-605163B1FE80</string>
 			<key>IDESourceControlWCCName</key>
-			<string>iOSBasic</string>
+			<string>iOSBasicNotification</string>
 		</dict>
 	</array>
 </dict>

@@ -9,13 +9,20 @@
 #import "WNAppDelegate.h"
 
 @implementation WNAppDelegate
+@synthesize navController, mainViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    mainViewController = [[WNMainViewController alloc] init];
+    navController = [[UINavigationController alloc] initWithRootViewController:mainViewController];
+    
+    [self.window setRootViewController:navController];
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

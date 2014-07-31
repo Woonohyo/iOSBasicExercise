@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WNMainViewController.h"
 
 @interface WNAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) UINavigationController *navController;
+@property (strong, nonatomic) UIViewController *mainViewController;
 @end

@@ -19,6 +19,12 @@
 		F1D6648B198A16E100A2FBD4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D66473198A16E100A2FBD4 /* UIKit.framework */; };
 		F1D66493198A16E100A2FBD4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1D66491198A16E100A2FBD4 /* InfoPlist.strings */; };
 		F1D66495198A16E100A2FBD4 /* iOSBasicNotificationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D66494198A16E100A2FBD4 /* iOSBasicNotificationTests.m */; };
+		F1D664A3198A17DE00A2FBD4 /* WNMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D664A2198A17DE00A2FBD4 /* WNMainViewController.m */; };
+		F1D664A6198A183300A2FBD4 /* WNRSPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D664A5198A183300A2FBD4 /* WNRSPModel.m */; };
+		F1D664AE198A1FED00A2FBD4 /* scissors.png in Resources */ = {isa = PBXBuildFile; fileRef = F1D664AB198A1FED00A2FBD4 /* scissors.png */; };
+		F1D664AF198A1FED00A2FBD4 /* rock.png in Resources */ = {isa = PBXBuildFile; fileRef = F1D664AC198A1FED00A2FBD4 /* rock.png */; };
+		F1D664B0198A1FED00A2FBD4 /* paper.png in Resources */ = {isa = PBXBuildFile; fileRef = F1D664AD198A1FED00A2FBD4 /* paper.png */; };
+		F1D664B2198A208200A2FBD4 /* readySetGo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F1D664B1198A208200A2FBD4 /* readySetGo.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +54,14 @@
 		F1D66490198A16E100A2FBD4 /* iOSBasicNotificationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSBasicNotificationTests-Info.plist"; sourceTree = "<group>"; };
 		F1D66492198A16E100A2FBD4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F1D66494198A16E100A2FBD4 /* iOSBasicNotificationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSBasicNotificationTests.m; sourceTree = "<group>"; };
+		F1D664A1198A17DE00A2FBD4 /* WNMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNMainViewController.h; sourceTree = "<group>"; };
+		F1D664A2198A17DE00A2FBD4 /* WNMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNMainViewController.m; sourceTree = "<group>"; };
+		F1D664A4198A183300A2FBD4 /* WNRSPModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNRSPModel.h; sourceTree = "<group>"; };
+		F1D664A5198A183300A2FBD4 /* WNRSPModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNRSPModel.m; sourceTree = "<group>"; };
+		F1D664AB198A1FED00A2FBD4 /* scissors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scissors.png; sourceTree = "<group>"; };
+		F1D664AC198A1FED00A2FBD4 /* rock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rock.png; sourceTree = "<group>"; };
+		F1D664AD198A1FED00A2FBD4 /* paper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paper.png; sourceTree = "<group>"; };
+		F1D664B1198A208200A2FBD4 /* readySetGo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = readySetGo.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +121,10 @@
 		F1D66475198A16E100A2FBD4 /* iOSBasicNotification */ = {
 			isa = PBXGroup;
 			children = (
+				F1D664AA198A1FE000A2FBD4 /* Resources */,
+				F1D664A0198A17B400A2FBD4 /* Controller */,
+				F1D6649F198A17AF00A2FBD4 /* View */,
+				F1D6649E198A17A900A2FBD4 /* Model */,
 				F1D6647E198A16E100A2FBD4 /* WNAppDelegate.h */,
 				F1D6647F198A16E100A2FBD4 /* WNAppDelegate.m */,
 				F1D66481198A16E100A2FBD4 /* Images.xcassets */,
@@ -142,6 +160,42 @@
 				F1D66491198A16E100A2FBD4 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F1D6649E198A17A900A2FBD4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F1D664A4198A183300A2FBD4 /* WNRSPModel.h */,
+				F1D664A5198A183300A2FBD4 /* WNRSPModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F1D6649F198A17AF00A2FBD4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F1D664A0198A17B400A2FBD4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F1D664A1198A17DE00A2FBD4 /* WNMainViewController.h */,
+				F1D664A2198A17DE00A2FBD4 /* WNMainViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		F1D664AA198A1FE000A2FBD4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F1D664B1198A208200A2FBD4 /* readySetGo.jpg */,
+				F1D664AB198A1FED00A2FBD4 /* scissors.png */,
+				F1D664AC198A1FED00A2FBD4 /* rock.png */,
+				F1D664AD198A1FED00A2FBD4 /* paper.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,8 +274,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1D664B0198A1FED00A2FBD4 /* paper.png in Resources */,
+				F1D664AE198A1FED00A2FBD4 /* scissors.png in Resources */,
+				F1D664B2198A208200A2FBD4 /* readySetGo.jpg in Resources */,
 				F1D6647A198A16E100A2FBD4 /* InfoPlist.strings in Resources */,
 				F1D66482198A16E100A2FBD4 /* Images.xcassets in Resources */,
+				F1D664AF198A1FED00A2FBD4 /* rock.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +300,8 @@
 			files = (
 				F1D6647C198A16E100A2FBD4 /* main.m in Sources */,
 				F1D66480198A16E100A2FBD4 /* WNAppDelegate.m in Sources */,
+				F1D664A6198A183300A2FBD4 /* WNRSPModel.m in Sources */,
+				F1D664A3198A17DE00A2FBD4 /* WNMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
