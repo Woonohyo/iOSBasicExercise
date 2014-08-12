@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WNTableViewCell.h"
+#import "WNDataModel.h"
 
 @interface WNMainViewController : UIViewController
 {
     UITableView *mainTableView;
-    UITableViewCell *mainTableViewCell;
+    WNDataModel *dataModel;
+    NSMutableArray *jsonObject;
+
 }
 
 @end

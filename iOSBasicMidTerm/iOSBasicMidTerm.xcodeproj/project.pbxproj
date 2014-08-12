@@ -42,6 +42,8 @@
 		F1EC1AE21999FCAF006C9A22 /* 21.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F1EC1ACC1999FCAF006C9A22 /* 21.jpg */; };
 		F1EC1AE31999FCAF006C9A22 /* 22.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F1EC1ACD1999FCAF006C9A22 /* 22.jpg */; };
 		F1EC1AE71999FCF3006C9A22 /* WNMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EC1AE61999FCF3006C9A22 /* WNMainViewController.m */; };
+		F1EC1AEB199A055C006C9A22 /* WNTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EC1AEA199A055C006C9A22 /* WNTableViewCell.m */; };
+		F1EC1AEF199A05D4006C9A22 /* WNDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EC1AEE199A05D4006C9A22 /* WNDataModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,10 @@
 		F1EC1ACD1999FCAF006C9A22 /* 22.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 22.jpg; sourceTree = "<group>"; };
 		F1EC1AE51999FCF3006C9A22 /* WNMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNMainViewController.h; sourceTree = "<group>"; };
 		F1EC1AE61999FCF3006C9A22 /* WNMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNMainViewController.m; sourceTree = "<group>"; };
+		F1EC1AE9199A055C006C9A22 /* WNTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNTableViewCell.h; sourceTree = "<group>"; };
+		F1EC1AEA199A055C006C9A22 /* WNTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNTableViewCell.m; sourceTree = "<group>"; };
+		F1EC1AED199A05D4006C9A22 /* WNDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDataModel.h; sourceTree = "<group>"; };
+		F1EC1AEE199A05D4006C9A22 /* WNDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDataModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +160,8 @@
 		F1EC1A8E1999FC40006C9A22 /* iOSBasicMidTerm */ = {
 			isa = PBXGroup;
 			children = (
+				F1EC1AEC199A05C7006C9A22 /* Model */,
+				F1EC1AE8199A0546006C9A22 /* View */,
 				F1EC1AE41999FCE4006C9A22 /* Controller */,
 				F1EC1AB71999FC9C006C9A22 /* Images */,
 				F1EC1A971999FC40006C9A22 /* WNAppDelegate.h */,
@@ -229,6 +237,24 @@
 				F1EC1AE61999FCF3006C9A22 /* WNMainViewController.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		F1EC1AE8199A0546006C9A22 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F1EC1AE9199A055C006C9A22 /* WNTableViewCell.h */,
+				F1EC1AEA199A055C006C9A22 /* WNTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F1EC1AEC199A05C7006C9A22 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F1EC1AED199A05D4006C9A22 /* WNDataModel.h */,
+				F1EC1AEE199A05D4006C9A22 /* WNDataModel.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,7 +375,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1EC1AEB199A055C006C9A22 /* WNTableViewCell.m in Sources */,
 				F1EC1A951999FC40006C9A22 /* main.m in Sources */,
+				F1EC1AEF199A05D4006C9A22 /* WNDataModel.m in Sources */,
 				F1EC1A991999FC40006C9A22 /* WNAppDelegate.m in Sources */,
 				F1EC1AE71999FCF3006C9A22 /* WNMainViewController.m in Sources */,
 			);

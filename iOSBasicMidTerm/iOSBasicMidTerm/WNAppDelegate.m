@@ -18,10 +18,9 @@
     [self.window makeKeyAndVisible];
     
     WNMainViewController *mainViewController = [[WNMainViewController alloc] init];
-    
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:mainViewController];
     
-    [self.window addSubview:navController.view];
+    [self.window setRootViewController:navController];
     return YES;
 }
 

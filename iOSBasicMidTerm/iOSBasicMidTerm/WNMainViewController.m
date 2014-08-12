@@ -18,7 +18,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNoti:) name:nil object:nil];
     }
     return self;
 }
@@ -27,24 +27,53 @@
 {
     [super viewDidLoad];
     [self.navigationItem setTitle:@"Album"];
+    [self.view setBackgroundColor:[UIColor clearColor]];
     
-    mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, 320, self.view.window.frame.size.height - 64) style:UITableViewStylePlain];
-    [mainTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"tableViewCell"];
+    dataModel = [WNDataModel sharedInstance];
+    if ( dataModel ) {
+        jsonObject = [dataModel jsonObject];
+        if (jsonObject) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"DataModelInitialized" object:self];
+        }
+    }
     
+    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    
+    mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, screenRect.size.width, screenRect.size.height) style:UITableViewStylePlain];
+    [mainTableView registerClass:[WNTableViewCell class] forCellReuseIdentifier:@"tableViewCell"];
+    [mainTableView setDelegate:self];
+    [mainTableView setDataSource:self];
     
     [self.view addSubview:mainTableView];
+}
+
+- (void) receiveNoti:(NSNotification *) noti {
+    if ([[noti name] isEqualToString:@"DataModelInitialized"]) {
+        NSLog(@"Data Model Init Complete");
+        [mainTableView reloadData];
+    }
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 9;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tableViewCell"];
+    static NSString *cellIdentifier = @"tableViewCell";
+    WNTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if ( cell == nil ) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"tableViewCell"];
+        cell = [[WNTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
+    
+    [cell.textLabel setText:[[jsonObject objectAtIndex:[indexPath row]] valueForKey:@"title"]];
+    [cell.detailTextLabel setText:[[jsonObject objectAtIndex:[indexPath row]] valueForKey:@"date"]];
+    
     return cell;
 }
 
@@ -55,14 +84,14 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
