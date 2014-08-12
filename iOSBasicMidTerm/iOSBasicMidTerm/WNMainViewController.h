@@ -16,6 +16,8 @@
     UITableView *mainTableView;
     WNDataModel *dataModel;
     NSMutableArray *jsonObject;
+    NSArray *sortedJsonObject;
+    BOOL isSorted;
 }
 
 @end

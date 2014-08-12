@@ -9,7 +9,7 @@
 #import "WNDataModel.h"
 
 @implementation WNDataModel
-@synthesize jsonObject;
+@synthesize jsonObject, sortedJsonObject;
 
 + (id) sharedInstance {
     static WNDataModel *sharedInstance = nil;
@@ -45,6 +45,14 @@
 
 - (NSString *)PhotoDateAt:(NSInteger)index {
     return [[jsonObject objectAtIndex:index] valueForKey:@"date"];
+}
+
+- (void) sortPhotoByDateAscend {
+    sortedJsonObject = [jsonObject sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        NSDate *first = [obj1 valueForKey:@"date"];
+        NSDate *second = [obj2 valueForKey:@"date"];
+        return [first compare:second];
+    }];
 }
 
 @end

@@ -12,13 +12,15 @@
 {
     char *data;
     NSMutableArray *jsonObject;
+    NSArray *sortedJsonObject;
 }
 
 @property (nonatomic, strong) NSMutableArray *jsonObject;
+@property (nonatomic, strong) NSArray *sortedJsonObject;
 
 + (id)sharedInstance;
 - (NSString*)PhotoTitleAt:(NSInteger)index;
 - (NSString *)PhotoFileNameAt:(NSInteger)index;
 - (NSString *)PhotoDateAt:(NSInteger)index;
-
+- (void)sortPhotoByDateAscend;
 @end

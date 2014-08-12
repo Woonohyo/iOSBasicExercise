@@ -19,6 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNoti:) name:nil object:nil];
+        isSorted = NO;
     }
     return self;
 }
@@ -26,7 +27,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     [self.navigationItem setTitle:@"Album"];
+    
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action:@selector(sortTableView)];
+    [self.navigationItem setRightBarButtonItem:rightButton];
+    
+    
     [self.view setBackgroundColor:[UIColor clearColor]];
     
     dataModel = [WNDataModel sharedInstance];
@@ -36,7 +43,6 @@
             [[NSNotificationCenter defaultCenter] postNotificationName:@"DataModelInitialized" object:self];
         }
     }
-    
     
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     
@@ -48,11 +54,25 @@
     [self.view addSubview:mainTableView];
 }
 
+- (void) sortTableView {
+    [dataModel sortPhotoByDateAscend];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"SortingDataModelCompletes" object:self];
+}
+
+
 - (void) receiveNoti:(NSNotification *) noti {
     if ([[noti name] isEqualToString:@"DataModelInitialized"]) {
-        NSLog(@"Data Model Init Complete");
-        [mainTableView reloadData];
+        
     }
+    else if ([[noti name] isEqualToString:@"SortingDataModelCompletes"]) {
+        sortedJsonObject = [dataModel sortedJsonObject];
+        isSorted = YES;
+    }
+    else if ([[noti name] isEqualToString:@"shake"]) {
+        isSorted = NO;
+        
+    }
+    [mainTableView reloadData];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -73,8 +93,14 @@
     
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     
-    [cell.textLabel setText:[[jsonObject objectAtIndex:[indexPath row]] valueForKey:@"title"]];
-    [cell.detailTextLabel setText:[[jsonObject objectAtIndex:[indexPath row]] valueForKey:@"date"]];
+    if ( isSorted ) {
+        [cell.textLabel setText:[[sortedJsonObject objectAtIndex:[indexPath row]] valueForKey:@"title"]];
+        [cell.detailTextLabel setText:[[sortedJsonObject objectAtIndex:[indexPath row]] valueForKey:@"date"]];
+        
+    } else {
+        [cell.textLabel setText:[[jsonObject objectAtIndex:[indexPath row]] valueForKey:@"title"]];
+        [cell.detailTextLabel setText:[[jsonObject objectAtIndex:[indexPath row]] valueForKey:@"date"]];
+    }
     
     return cell;
 }
@@ -89,6 +115,13 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if (motion == UIEventSubtypeMotionShake) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"shake" object:self];
+    }
 }
 
 /*
