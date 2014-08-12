@@ -1,5 +1,5 @@
 //
-//  WNMainViewController.h
+//  WNPhotoViewController.h
 //  iOSBasicMidTerm
 //
 //  Created by Wonhyo Yi on 2014. 8. 12..
@@ -7,15 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WNTableViewCell.h"
 #import "WNDataModel.h"
-#import "WNPhotoViewController.h"
 
-@interface WNMainViewController : UIViewController
-{
-    UITableView *mainTableView;
+@interface WNPhotoViewController : UIViewController{
     WNDataModel *dataModel;
-    NSMutableArray *jsonObject;
+    NSInteger index;
 }
+
+- (id)initWithIndex:(NSInteger)theIndex;
 
 @end

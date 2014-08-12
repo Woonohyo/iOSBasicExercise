@@ -35,4 +35,16 @@
     return self;
 }
 
+- (NSString *)PhotoTitleAt:(NSInteger)index {
+    return [[jsonObject objectAtIndex:index] valueForKey:@"title"];
+}
+
+- (NSString *)PhotoFileNameAt:(NSInteger)index {
+    return [[jsonObject objectAtIndex:index] valueForKey:@"image"];
+}
+
+- (NSString *)PhotoDateAt:(NSInteger)index {
+    return [[jsonObject objectAtIndex:index] valueForKey:@"date"];
+}
+
 @end

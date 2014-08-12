@@ -71,10 +71,18 @@
         cell = [[WNTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
     
+    [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+    
     [cell.textLabel setText:[[jsonObject objectAtIndex:[indexPath row]] valueForKey:@"title"]];
     [cell.detailTextLabel setText:[[jsonObject objectAtIndex:[indexPath row]] valueForKey:@"date"]];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    WNPhotoViewController *photoViewController = [[WNPhotoViewController alloc] initWithIndex:[indexPath row]];
+    
+    [self.navigationController pushViewController:photoViewController animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

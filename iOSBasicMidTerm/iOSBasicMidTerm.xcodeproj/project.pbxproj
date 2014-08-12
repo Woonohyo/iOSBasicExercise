@@ -44,6 +44,7 @@
 		F1EC1AE71999FCF3006C9A22 /* WNMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EC1AE61999FCF3006C9A22 /* WNMainViewController.m */; };
 		F1EC1AEB199A055C006C9A22 /* WNTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EC1AEA199A055C006C9A22 /* WNTableViewCell.m */; };
 		F1EC1AEF199A05D4006C9A22 /* WNDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EC1AEE199A05D4006C9A22 /* WNDataModel.m */; };
+		F1EC1AF2199A39D0006C9A22 /* WNPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EC1AF1199A39D0006C9A22 /* WNPhotoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,8 @@
 		F1EC1AEA199A055C006C9A22 /* WNTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNTableViewCell.m; sourceTree = "<group>"; };
 		F1EC1AED199A05D4006C9A22 /* WNDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDataModel.h; sourceTree = "<group>"; };
 		F1EC1AEE199A05D4006C9A22 /* WNDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDataModel.m; sourceTree = "<group>"; };
+		F1EC1AF0199A39D0006C9A22 /* WNPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNPhotoViewController.h; sourceTree = "<group>"; };
+		F1EC1AF1199A39D0006C9A22 /* WNPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNPhotoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +238,8 @@
 			children = (
 				F1EC1AE51999FCF3006C9A22 /* WNMainViewController.h */,
 				F1EC1AE61999FCF3006C9A22 /* WNMainViewController.m */,
+				F1EC1AF0199A39D0006C9A22 /* WNPhotoViewController.h */,
+				F1EC1AF1199A39D0006C9A22 /* WNPhotoViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -379,6 +384,7 @@
 				F1EC1A951999FC40006C9A22 /* main.m in Sources */,
 				F1EC1AEF199A05D4006C9A22 /* WNDataModel.m in Sources */,
 				F1EC1A991999FC40006C9A22 /* WNAppDelegate.m in Sources */,
+				F1EC1AF2199A39D0006C9A22 /* WNPhotoViewController.m in Sources */,
 				F1EC1AE71999FCF3006C9A22 /* WNMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

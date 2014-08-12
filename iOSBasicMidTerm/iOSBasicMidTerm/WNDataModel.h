@@ -17,5 +17,8 @@
 @property (nonatomic, strong) NSMutableArray *jsonObject;
 
 + (id)sharedInstance;
+- (NSString*)PhotoTitleAt:(NSInteger)index;
+- (NSString *)PhotoFileNameAt:(NSInteger)index;
+- (NSString *)PhotoDateAt:(NSInteger)index;
 
 @end
