@@ -33,7 +33,6 @@
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action:@selector(sortTableView)];
     [self.navigationItem setRightBarButtonItem:rightButton];
     
-    
     [self.view setBackgroundColor:[UIColor clearColor]];
     
     dataModel = [WNDataModel sharedInstance];
@@ -50,15 +49,19 @@
     [mainTableView registerClass:[WNTableViewCell class] forCellReuseIdentifier:@"tableViewCell"];
     [mainTableView setDelegate:self];
     [mainTableView setDataSource:self];
+    [mainTableView setAllowsMultipleSelectionDuringEditing:NO];
     
     [self.view addSubview:mainTableView];
 }
 
-- (void) sortTableView {
-    [dataModel sortPhotoByDateAscend];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"SortingDataModelCompletes" object:self];
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
+# pragma mark -
+# pragma mark NSNotificationCenter
 
 - (void) receiveNoti:(NSNotification *) noti {
     if ([[noti name] isEqualToString:@"DataModelInitialized"]) {
@@ -75,12 +78,15 @@
     [mainTableView reloadData];
 }
 
+# pragma mark -
+# pragma mark UITableView Setting
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 9;
+    return [dataModel.jsonObject count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -111,11 +117,29 @@
     [self.navigationController pushViewController:photoViewController animated:YES];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void) sortTableView {
+    [dataModel sortPhotoByDateAscend];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"SortingDataModelCompletes" object:self];
 }
+
+# pragma mark UITableView - Swipe to delete
+
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewCellEditingStyleDelete;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle) editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSLog(@"Editing!");
+    }
+}
+
+#pragma mark -
+#pragma mark Shaking Gesture
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
