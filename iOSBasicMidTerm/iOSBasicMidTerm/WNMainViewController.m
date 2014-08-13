@@ -19,7 +19,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNoti:) name:nil object:nil];
-        isSorted = NO;
     }
     return self;
 }
@@ -69,10 +68,11 @@
     }
     else if ([[noti name] isEqualToString:@"SortingDataModelCompletes"]) {
         sortedJsonObject = [dataModel sortedJsonObject];
-        isSorted = YES;
+        [dataModel setSorted];
+        
     }
     else if ([[noti name] isEqualToString:@"shake"]) {
-        isSorted = NO;
+        [dataModel setUnsorted];
         
     }
     [mainTableView reloadData];
@@ -98,15 +98,9 @@
     }
     
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
-    
-    if ( isSorted ) {
-        [cell.textLabel setText:[[sortedJsonObject objectAtIndex:[indexPath row]] valueForKey:@"title"]];
-        [cell.detailTextLabel setText:[[sortedJsonObject objectAtIndex:[indexPath row]] valueForKey:@"date"]];
-        
-    } else {
-        [cell.textLabel setText:[[jsonObject objectAtIndex:[indexPath row]] valueForKey:@"title"]];
-        [cell.detailTextLabel setText:[[jsonObject objectAtIndex:[indexPath row]] valueForKey:@"date"]];
-    }
+
+        [cell.textLabel setText:[dataModel PhotoTitleAt:[indexPath row]]];
+        [cell.detailTextLabel setText:[dataModel PhotoDateAt:[indexPath row]]];
     
     return cell;
 }
@@ -123,11 +117,6 @@
 }
 
 # pragma mark UITableView - Swipe to delete
-
--(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
     return UITableViewCellEditingStyleDelete;
 }
@@ -138,6 +127,8 @@
     }
 }
 
+
+
 #pragma mark -
 #pragma mark Shaking Gesture
 
@@ -147,16 +138,5 @@
         [[NSNotificationCenter defaultCenter] postNotificationName:@"shake" object:self];
     }
 }
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
- {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end

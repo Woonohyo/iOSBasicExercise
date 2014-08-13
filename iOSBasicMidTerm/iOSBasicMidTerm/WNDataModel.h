@@ -13,6 +13,7 @@
     char *data;
     NSMutableArray *jsonObject;
     NSArray *sortedJsonObject;
+    BOOL isSorted;
 }
 
 @property (nonatomic, strong) NSMutableArray *jsonObject;
@@ -23,4 +24,7 @@
 - (NSString *)PhotoFileNameAt:(NSInteger)index;
 - (NSString *)PhotoDateAt:(NSInteger)index;
 - (void)sortPhotoByDateAscend;
+
+-(void)setSorted;
+-(void)setUnsorted;
 @end

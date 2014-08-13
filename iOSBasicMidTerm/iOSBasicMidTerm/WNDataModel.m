@@ -30,21 +30,36 @@
         NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
         
         jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:nil];
+        
+        isSorted = NO;
     }
     
     return self;
 }
 
 - (NSString *)PhotoTitleAt:(NSInteger)index {
-    return [[jsonObject objectAtIndex:index] valueForKey:@"title"];
+    if (isSorted) {
+        return [[sortedJsonObject objectAtIndex:index] valueForKey:@"title"];
+    } else {
+        return [[jsonObject objectAtIndex:index] valueForKey:@"title"];
+    }
 }
 
 - (NSString *)PhotoFileNameAt:(NSInteger)index {
-    return [[jsonObject objectAtIndex:index] valueForKey:@"image"];
+    if (isSorted) {
+        return [[sortedJsonObject objectAtIndex:index] valueForKey:@"image"];
+    } else {
+        
+        return [[jsonObject objectAtIndex:index] valueForKey:@"image"];
+    }
 }
 
 - (NSString *)PhotoDateAt:(NSInteger)index {
-    return [[jsonObject objectAtIndex:index] valueForKey:@"date"];
+    if (isSorted) {
+        return [[sortedJsonObject objectAtIndex:index] valueForKey:@"date"];
+    } else {
+        return [[jsonObject objectAtIndex:index] valueForKey:@"date"];
+    }
 }
 
 - (void) sortPhotoByDateAscend {
@@ -53,6 +68,14 @@
         NSDate *second = [obj2 valueForKey:@"date"];
         return [first compare:second];
     }];
+}
+
+- (void) setSorted {
+    isSorted = YES;
+}
+
+- (void) setUnsorted {
+    isSorted = NO;
 }
 
 @end

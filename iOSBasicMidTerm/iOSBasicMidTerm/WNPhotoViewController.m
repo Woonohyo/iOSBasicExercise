@@ -32,8 +32,6 @@
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     
     UILabel *photoTitleTextView = [[UILabel alloc] initWithFrame:CGRectMake(0, 64, screenRect.size.width, 50)];
-//    [photoTitleTextView.layer setBorderColor:[UIColor redColor].CGColor];
-//    [photoTitleTextView.layer setBorderWidth:1];
     
     [photoTitleTextView setTextAlignment:NSTextAlignmentCenter];
     [photoTitleTextView setText:[dataModel PhotoTitleAt:index]];
@@ -46,8 +44,6 @@
     UILabel *photoDateTextView = [[UILabel alloc] initWithFrame:CGRectMake(0, 370, screenRect.size.width, 50)];
     [photoDateTextView setTextAlignment:NSTextAlignmentCenter];
     [photoDateTextView setText:[dataModel PhotoDateAt:index]];
-//    [photoDateTextView.layer setBorderWidth:1];
-//    [photoDateTextView.layer setBorderColor:[UIColor greenColor].CGColor];
     
     
     [self.view addSubview:photoDateTextView];
