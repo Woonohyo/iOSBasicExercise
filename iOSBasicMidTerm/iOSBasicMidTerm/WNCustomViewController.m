@@ -7,6 +7,7 @@
 //
 
 #import "WNCustomViewController.h"
+#define ROW_HEIGHT 80
 
 @interface WNCustomViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -64,8 +65,9 @@
 # pragma mark UITableView Setting
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 80.0;
+    return ROW_HEIGHT;
 }
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -78,11 +80,16 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     WNTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if ( cell == nil ) {
-        cell = [[WNTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
+        cell = [[WNTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     
+    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[dataModel PhotoFileNameAtIndex:[indexPath row]]]];
+    [backgroundView setFrame:CGRectMake(0, 0, 320, ROW_HEIGHT)];
+    [cell.contentView addSubview:backgroundView];
+    [cell setContentMode:UIViewContentModeCenter];
     [cell.textLabel setText:[dataModel PhotoTitleAtIndex:[indexPath row]]];
-    [cell.detailTextLabel setText:[dataModel PhotoDateAtIndex:[indexPath row]]];
+    [cell.textLabel setTextAlignment:NSTextAlignmentRight];
+    [cell.contentView bringSubviewToFront:cell.textLabel];
     
     return cell;
 }
