@@ -32,12 +32,15 @@
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action:@selector(sortTableView)];
     [self.navigationItem setRightBarButtonItem:rightButton];
     
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(changeTableViewCell)];
+    [self.navigationItem setLeftBarButtonItem:leftButton];
+    
     dataModel = [WNDataModel sharedInstance];
     
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     
     mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, screenRect.size.width, screenRect.size.height) style:UITableViewStylePlain];
-    //[mainTableView registerClass:[WNTableViewCell class] forCellReuseIdentifier:@"tableViewCell"];
+    [mainTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"tableViewCell"];
     [mainTableView setDelegate:self];
     [mainTableView setDataSource:self];
     
@@ -86,6 +89,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if ( cell == nil ) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
+        [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     }
     
     [cell.textLabel setText:[dataModel PhotoTitleAtIndex:[indexPath row]]];
@@ -127,6 +131,14 @@
     if (motion == UIEventSubtypeMotionShake) {
         [[NSNotificationCenter defaultCenter] postNotificationName:@"shake" object:self];
     }
+}
+
+#pragma mark -
+#pragma mark Custom TableView Cell
+- (void) changeTableViewCell {
+    WNCustomViewController *customViewController = [[WNCustomViewController alloc] init];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:customViewController];
+    [self.navigationController presentViewController:navController animated:YES completion:nil];
 }
 
 @end

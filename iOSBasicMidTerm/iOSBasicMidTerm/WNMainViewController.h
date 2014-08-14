@@ -10,6 +10,7 @@
 #import "WNDataModel.h"
 #import "WNPhotoViewController.h"
 #import "WNTableViewCell.h"
+#import "WNCustomViewController.h"
 
 @interface WNMainViewController : UIViewController
 {

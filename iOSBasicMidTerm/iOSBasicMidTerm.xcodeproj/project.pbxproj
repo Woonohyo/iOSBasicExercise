@@ -45,6 +45,7 @@
 		F1EC1AEB199A055C006C9A22 /* WNTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EC1AEA199A055C006C9A22 /* WNTableViewCell.m */; };
 		F1EC1AEF199A05D4006C9A22 /* WNDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EC1AEE199A05D4006C9A22 /* WNDataModel.m */; };
 		F1EC1AF2199A39D0006C9A22 /* WNPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EC1AF1199A39D0006C9A22 /* WNPhotoViewController.m */; };
+		F1EC1B74199CCF96006C9A22 /* WNCustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EC1B73199CCF96006C9A22 /* WNCustomViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,8 @@
 		F1EC1AEE199A05D4006C9A22 /* WNDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDataModel.m; sourceTree = "<group>"; };
 		F1EC1AF0199A39D0006C9A22 /* WNPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNPhotoViewController.h; sourceTree = "<group>"; };
 		F1EC1AF1199A39D0006C9A22 /* WNPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNPhotoViewController.m; sourceTree = "<group>"; };
+		F1EC1B72199CCF96006C9A22 /* WNCustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNCustomViewController.h; sourceTree = "<group>"; };
+		F1EC1B73199CCF96006C9A22 /* WNCustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNCustomViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,9 +166,9 @@
 		F1EC1A8E1999FC40006C9A22 /* iOSBasicMidTerm */ = {
 			isa = PBXGroup;
 			children = (
+				F1EC1AE41999FCE4006C9A22 /* Controller */,
 				F1EC1AEC199A05C7006C9A22 /* Model */,
 				F1EC1AE8199A0546006C9A22 /* View */,
-				F1EC1AE41999FCE4006C9A22 /* Controller */,
 				F1EC1AB71999FC9C006C9A22 /* Images */,
 				F1EC1A971999FC40006C9A22 /* WNAppDelegate.h */,
 				F1EC1A981999FC40006C9A22 /* WNAppDelegate.m */,
@@ -240,6 +243,8 @@
 				F1EC1AE61999FCF3006C9A22 /* WNMainViewController.m */,
 				F1EC1AF0199A39D0006C9A22 /* WNPhotoViewController.h */,
 				F1EC1AF1199A39D0006C9A22 /* WNPhotoViewController.m */,
+				F1EC1B72199CCF96006C9A22 /* WNCustomViewController.h */,
+				F1EC1B73199CCF96006C9A22 /* WNCustomViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -380,6 +385,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1EC1B74199CCF96006C9A22 /* WNCustomViewController.m in Sources */,
 				F1EC1AEB199A055C006C9A22 /* WNTableViewCell.m in Sources */,
 				F1EC1A951999FC40006C9A22 /* main.m in Sources */,
 				F1EC1AEF199A05D4006C9A22 /* WNDataModel.m in Sources */,
