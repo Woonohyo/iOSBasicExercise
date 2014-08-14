@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WNTableViewCell.h"
 #import "WNDataModel.h"
 #import "WNPhotoViewController.h"
+#import "WNTableViewCell.h"
 
 @interface WNMainViewController : UIViewController
 {

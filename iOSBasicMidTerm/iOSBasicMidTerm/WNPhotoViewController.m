@@ -45,7 +45,6 @@
     [photoDateTextView setTextAlignment:NSTextAlignmentCenter];
     [photoDateTextView setText:[dataModel PhotoDateAt:index]];
     
-    
     [self.view addSubview:photoDateTextView];
     [self.view addSubview:photoTitleTextView];
     [self.view addSubview:photoImageView];

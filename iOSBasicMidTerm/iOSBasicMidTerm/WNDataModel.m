@@ -32,6 +32,7 @@
         jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:nil];
         
         isSorted = NO;
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"DataModelInitialized" object:self];
     }
     
     return self;
@@ -68,6 +69,7 @@
         NSDate *second = [obj2 valueForKey:@"date"];
         return [first compare:second];
     }];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"SortingDataModelCompletes" object:self];
 }
 
 - (void) setSorted {
