@@ -19,7 +19,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -41,6 +40,9 @@
     [customTableView registerClass:[WNTableViewCell class] forCellReuseIdentifier:@"tableViewCell"];
     [customTableView setDelegate:self];
     [customTableView setDataSource:self];
+    
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"알림" message:@"정렬한 후에도 열어보세요." delegate:self cancelButtonTitle:@"어 그래" otherButtonTitles:nil, nil];
+    [alertView show];
     
     [self.view addSubview:customTableView];
 }
@@ -68,6 +70,14 @@
     return ROW_HEIGHT;
 }
 
+-(BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView didHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [customTableView cellForRowAtIndexPath:indexPath];
+}
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -87,6 +97,7 @@
     [backgroundView setFrame:CGRectMake(0, 0, 320, ROW_HEIGHT)];
     [cell.contentView addSubview:backgroundView];
     [cell setContentMode:UIViewContentModeCenter];
+    
     [cell.textLabel setText:[dataModel PhotoTitleAtIndex:[indexPath row]]];
     [cell.textLabel setTextAlignment:NSTextAlignmentRight];
     [cell.contentView bringSubviewToFront:cell.textLabel];
