@@ -34,16 +34,16 @@
     UILabel *photoTitleTextView = [[UILabel alloc] initWithFrame:CGRectMake(0, 64, screenRect.size.width, 50)];
     
     [photoTitleTextView setTextAlignment:NSTextAlignmentCenter];
-    [photoTitleTextView setText:[dataModel PhotoTitleAt:index]];
+    [photoTitleTextView setText:[dataModel PhotoTitleAtIndex:index]];
     [photoTitleTextView setTextColor:[UIColor blackColor]];
     
     UIImageView *photoImageView = [[UIImageView alloc] initWithFrame:CGRectMake(40, 120, 240, 240)];
-    [photoImageView setImage:[UIImage imageNamed:[dataModel PhotoFileNameAt:index]]];
+    [photoImageView setImage:[UIImage imageNamed:[dataModel PhotoFileNameAtIndex:index]]];
     [photoImageView setContentMode:UIViewContentModeScaleToFill];
     
     UILabel *photoDateTextView = [[UILabel alloc] initWithFrame:CGRectMake(0, 370, screenRect.size.width, 50)];
     [photoDateTextView setTextAlignment:NSTextAlignmentCenter];
-    [photoDateTextView setText:[dataModel PhotoDateAt:index]];
+    [photoDateTextView setText:[dataModel PhotoDateAtIndex:index]];
     
     [self.view addSubview:photoDateTextView];
     [self.view addSubview:photoTitleTextView];

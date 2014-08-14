@@ -66,6 +66,9 @@
         [dataModel setUnsorted];
         [mainTableView reloadData];
     }
+    else if ([[noti name] isEqualToString:@"ObjectDeleted"]) {
+        [mainTableView reloadData];
+    }
 }
 
 # pragma mark -
@@ -76,7 +79,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [dataModel.jsonObject count];
+    return [dataModel count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -85,8 +88,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
     }
     
-    [cell.textLabel setText:[dataModel PhotoTitleAt:[indexPath row]]];
-    [cell.detailTextLabel setText:[dataModel PhotoDateAt:[indexPath row]]];
+    [cell.textLabel setText:[dataModel PhotoTitleAtIndex:[indexPath row]]];
+    [cell.detailTextLabel setText:[dataModel PhotoDateAtIndex:[indexPath row]]];
     
     return cell;
 }
@@ -111,7 +114,7 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        
+        [dataModel removeObjectAtIndex:[indexPath row]];
     }
 }
 

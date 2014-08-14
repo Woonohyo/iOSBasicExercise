@@ -38,7 +38,7 @@
     return self;
 }
 
-- (NSString *)PhotoTitleAt:(NSInteger)index {
+- (NSString *)PhotoTitleAtIndex:(NSInteger)index {
     if (isSorted) {
         return [[sortedJsonObject objectAtIndex:index] valueForKey:@"title"];
     } else {
@@ -46,7 +46,7 @@
     }
 }
 
-- (NSString *)PhotoFileNameAt:(NSInteger)index {
+- (NSString *)PhotoFileNameAtIndex:(NSInteger)index {
     if (isSorted) {
         return [[sortedJsonObject objectAtIndex:index] valueForKey:@"image"];
     } else {
@@ -55,7 +55,7 @@
     }
 }
 
-- (NSString *)PhotoDateAt:(NSInteger)index {
+- (NSString *)PhotoDateAtIndex:(NSInteger)index {
     if (isSorted) {
         return [[sortedJsonObject objectAtIndex:index] valueForKey:@"date"];
     } else {
@@ -64,14 +64,34 @@
 }
 
 - (void) sortPhotoByDateAscend {
-    sortedJsonObject = [jsonObject sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+    sortedJsonObject = [NSMutableArray arrayWithArray:[jsonObject sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
         NSDate *first = [obj1 valueForKey:@"date"];
         NSDate *second = [obj2 valueForKey:@"date"];
         return [first compare:second];
-    }];
+    }]];
+    
     [[NSNotificationCenter defaultCenter] postNotificationName:@"SortingDataModelCompletes" object:self];
 }
 
+- (void) removeObjectAtIndex:(NSInteger)index {
+    if (isSorted) {
+        [sortedJsonObject removeObjectAtIndex:index];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"ObjectDeleted" object:self];
+    }
+    else {
+        [jsonObject removeObjectAtIndex:index];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"ObjectDeleted" object:self];
+    }
+}
+
+- (NSInteger) count {
+    if (isSorted) {
+        return [sortedJsonObject count];
+    }
+    else {
+        return [jsonObject count];
+    }
+}
 - (void) setSorted {
     isSorted = YES;
 }
