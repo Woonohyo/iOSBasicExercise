@@ -87,7 +87,10 @@
                 // bytesRead is an instance variable of type NSNumber.
                 //[bytesRead setIntValue:[bytesRead intValue]+len];
                 //bytesRead = [bytesRead initWithInt:[bytesRead intValue]+len];
-                NSLog(@"%s", buf);
+                NSTimeInterval time = atol((const char*)buf);
+                [_objects insertObject:[NSDate dateWithTimeIntervalSince1970:time] atIndex:0];
+                NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+                [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
             } else {
                 NSLog(@"no buffer!");
                 
@@ -133,11 +136,6 @@
 }
 
 - (void)notiReceived:(NSNotification*)noti {
-    if ([[noti name] isEqualToString:@"dataReceived"]) {
-        [_objects insertObject:_data atIndex:0];
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-        [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-    }
 }
 
 #pragma mark - Table View
