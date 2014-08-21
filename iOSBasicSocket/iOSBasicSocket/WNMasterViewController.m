@@ -31,6 +31,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notiReceived:) name:nil object:self];
     
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
     
@@ -52,15 +53,18 @@
     
     [self setUpStreamForURL:SERVER_PATH];
     
-    [_objects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    //[_objects insertObject:_data atIndex:0];
+    //NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    //[self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 - (void)setUpStreamForURL:(NSString *)path {
+    CFReadStreamRef readStream;
+    CFWriteStreamRef writeStream;
+    CFStreamCreatePairWithSocketToHost(NULL, (CFStringRef)@"127.0.0.1", 7000, &readStream, &writeStream);
+    
     // iStream is NSInputStream instance variable
-    NSURL *url = [NSURL URLWithString:@"127.0.0.1:7000"];
-    iStream = [[NSInputStream alloc] initWithURL:url];
+    iStream = (__bridge NSInputStream *)(readStream);
     [iStream setDelegate:self];
     [iStream scheduleInRunLoop:[NSRunLoop currentRunLoop]
                        forMode:NSDefaultRunLoopMode];
@@ -79,12 +83,14 @@
             len = [(NSInputStream *)iStream read:buf maxLength:1024];
             if(len) {
                 [_data appendBytes:(const void *)buf length:len];
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"dataReceived" object:self];
                 // bytesRead is an instance variable of type NSNumber.
                 //[bytesRead setIntValue:[bytesRead intValue]+len];
-                bytesRead = [bytesRead initWithInt:[bytesRead intValue]+len];
+                //bytesRead = [bytesRead initWithInt:[bytesRead intValue]+len];
                 NSLog(@"%s", buf);
             } else {
                 NSLog(@"no buffer!");
+                
             }
             break;
         }
@@ -123,6 +129,14 @@
         {
             
         }
+    }
+}
+
+- (void)notiReceived:(NSNotification*)noti {
+    if ([[noti name] isEqualToString:@"dataReceived"]) {
+        [_objects insertObject:_data atIndex:0];
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+        [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     }
 }
 
