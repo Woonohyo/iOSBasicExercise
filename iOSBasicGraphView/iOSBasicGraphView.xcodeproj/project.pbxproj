@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F162DF8119AEFE8F00C4E755 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F162DF8019AEFE8F00C4E755 /* Foundation.framework */; };
+		F162DF8319AEFE8F00C4E755 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F162DF8219AEFE8F00C4E755 /* CoreGraphics.framework */; };
+		F162DF8519AEFE8F00C4E755 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F162DF8419AEFE8F00C4E755 /* UIKit.framework */; };
+		F162DF8B19AEFE8F00C4E755 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F162DF8919AEFE8F00C4E755 /* InfoPlist.strings */; };
+		F162DF8D19AEFE8F00C4E755 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F162DF8C19AEFE8F00C4E755 /* main.m */; };
+		F162DF9119AEFE8F00C4E755 /* WNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F162DF9019AEFE8F00C4E755 /* WNAppDelegate.m */; };
+		F162DF9319AEFE8F00C4E755 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F162DF9219AEFE8F00C4E755 /* Images.xcassets */; };
+		F162DF9A19AEFE8F00C4E755 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F162DF9919AEFE8F00C4E755 /* XCTest.framework */; };
+		F162DF9B19AEFE9000C4E755 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F162DF8019AEFE8F00C4E755 /* Foundation.framework */; };
+		F162DF9C19AEFE9000C4E755 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F162DF8419AEFE8F00C4E755 /* UIKit.framework */; };
+		F162DFA419AEFE9000C4E755 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F162DFA219AEFE9000C4E755 /* InfoPlist.strings */; };
+		F162DFA619AEFE9000C4E755 /* iOSBasicGraphViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F162DFA519AEFE9000C4E755 /* iOSBasicGraphViewTests.m */; };
+		F162DFB519AEFEBF00C4E755 /* WNMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F162DFB419AEFEBF00C4E755 /* WNMainViewController.m */; };
+		F162DFB819AEFF2200C4E755 /* WNDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F162DFB719AEFF2200C4E755 /* WNDataModel.m */; };
+		F162DFBB19AF01DD00C4E755 /* WNBarGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = F162DFBA19AF01DD00C4E755 /* WNBarGraphView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F162DF9D19AEFE9000C4E755 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F162DF7519AEFE8F00C4E755 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F162DF7C19AEFE8F00C4E755;
+			remoteInfo = iOSBasicGraphView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F162DF7D19AEFE8F00C4E755 /* iOSBasicGraphView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSBasicGraphView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F162DF8019AEFE8F00C4E755 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F162DF8219AEFE8F00C4E755 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F162DF8419AEFE8F00C4E755 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F162DF8819AEFE8F00C4E755 /* iOSBasicGraphView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSBasicGraphView-Info.plist"; sourceTree = "<group>"; };
+		F162DF8A19AEFE8F00C4E755 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F162DF8C19AEFE8F00C4E755 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F162DF8E19AEFE8F00C4E755 /* iOSBasicGraphView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSBasicGraphView-Prefix.pch"; sourceTree = "<group>"; };
+		F162DF8F19AEFE8F00C4E755 /* WNAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WNAppDelegate.h; sourceTree = "<group>"; };
+		F162DF9019AEFE8F00C4E755 /* WNAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WNAppDelegate.m; sourceTree = "<group>"; };
+		F162DF9219AEFE8F00C4E755 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F162DF9819AEFE8F00C4E755 /* iOSBasicGraphViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSBasicGraphViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F162DF9919AEFE8F00C4E755 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F162DFA119AEFE9000C4E755 /* iOSBasicGraphViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSBasicGraphViewTests-Info.plist"; sourceTree = "<group>"; };
+		F162DFA319AEFE9000C4E755 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F162DFA519AEFE9000C4E755 /* iOSBasicGraphViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSBasicGraphViewTests.m; sourceTree = "<group>"; };
+		F162DFB319AEFEBF00C4E755 /* WNMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNMainViewController.h; sourceTree = "<group>"; };
+		F162DFB419AEFEBF00C4E755 /* WNMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNMainViewController.m; sourceTree = "<group>"; };
+		F162DFB619AEFF2200C4E755 /* WNDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNDataModel.h; sourceTree = "<group>"; };
+		F162DFB719AEFF2200C4E755 /* WNDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNDataModel.m; sourceTree = "<group>"; };
+		F162DFB919AF01DD00C4E755 /* WNBarGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNBarGraphView.h; sourceTree = "<group>"; };
+		F162DFBA19AF01DD00C4E755 /* WNBarGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNBarGraphView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F162DF7A19AEFE8F00C4E755 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F162DF8319AEFE8F00C4E755 /* CoreGraphics.framework in Frameworks */,
+				F162DF8519AEFE8F00C4E755 /* UIKit.framework in Frameworks */,
+				F162DF8119AEFE8F00C4E755 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F162DF9519AEFE8F00C4E755 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F162DF9A19AEFE8F00C4E755 /* XCTest.framework in Frameworks */,
+				F162DF9C19AEFE9000C4E755 /* UIKit.framework in Frameworks */,
+				F162DF9B19AEFE9000C4E755 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F162DF7419AEFE8F00C4E755 = {
+			isa = PBXGroup;
+			children = (
+				F162DF8619AEFE8F00C4E755 /* iOSBasicGraphView */,
+				F162DF9F19AEFE9000C4E755 /* iOSBasicGraphViewTests */,
+				F162DF7F19AEFE8F00C4E755 /* Frameworks */,
+				F162DF7E19AEFE8F00C4E755 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F162DF7E19AEFE8F00C4E755 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F162DF7D19AEFE8F00C4E755 /* iOSBasicGraphView.app */,
+				F162DF9819AEFE8F00C4E755 /* iOSBasicGraphViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F162DF7F19AEFE8F00C4E755 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F162DF8019AEFE8F00C4E755 /* Foundation.framework */,
+				F162DF8219AEFE8F00C4E755 /* CoreGraphics.framework */,
+				F162DF8419AEFE8F00C4E755 /* UIKit.framework */,
+				F162DF9919AEFE8F00C4E755 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F162DF8619AEFE8F00C4E755 /* iOSBasicGraphView */ = {
+			isa = PBXGroup;
+			children = (
+				F162DFB219AEFEAC00C4E755 /* Controller */,
+				F162DFB119AEFEA900C4E755 /* View */,
+				F162DFAF19AEFE9C00C4E755 /* Model */,
+				F162DF8F19AEFE8F00C4E755 /* WNAppDelegate.h */,
+				F162DF9019AEFE8F00C4E755 /* WNAppDelegate.m */,
+				F162DF9219AEFE8F00C4E755 /* Images.xcassets */,
+				F162DF8719AEFE8F00C4E755 /* Supporting Files */,
+			);
+			path = iOSBasicGraphView;
+			sourceTree = "<group>";
+		};
+		F162DF8719AEFE8F00C4E755 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F162DF8819AEFE8F00C4E755 /* iOSBasicGraphView-Info.plist */,
+				F162DF8919AEFE8F00C4E755 /* InfoPlist.strings */,
+				F162DF8C19AEFE8F00C4E755 /* main.m */,
+				F162DF8E19AEFE8F00C4E755 /* iOSBasicGraphView-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F162DF9F19AEFE9000C4E755 /* iOSBasicGraphViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				F162DFA519AEFE9000C4E755 /* iOSBasicGraphViewTests.m */,
+				F162DFA019AEFE9000C4E755 /* Supporting Files */,
+			);
+			path = iOSBasicGraphViewTests;
+			sourceTree = "<group>";
+		};
+		F162DFA019AEFE9000C4E755 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F162DFA119AEFE9000C4E755 /* iOSBasicGraphViewTests-Info.plist */,
+				F162DFA219AEFE9000C4E755 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F162DFAF19AEFE9C00C4E755 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F162DFB619AEFF2200C4E755 /* WNDataModel.h */,
+				F162DFB719AEFF2200C4E755 /* WNDataModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F162DFB119AEFEA900C4E755 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F162DFB919AF01DD00C4E755 /* WNBarGraphView.h */,
+				F162DFBA19AF01DD00C4E755 /* WNBarGraphView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F162DFB219AEFEAC00C4E755 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F162DFB319AEFEBF00C4E755 /* WNMainViewController.h */,
+				F162DFB419AEFEBF00C4E755 /* WNMainViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F162DF7C19AEFE8F00C4E755 /* iOSBasicGraphView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F162DFA919AEFE9000C4E755 /* Build configuration list for PBXNativeTarget "iOSBasicGraphView" */;
+			buildPhases = (
+				F162DF7919AEFE8F00C4E755 /* Sources */,
+				F162DF7A19AEFE8F00C4E755 /* Frameworks */,
+				F162DF7B19AEFE8F00C4E755 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iOSBasicGraphView;
+			productName = iOSBasicGraphView;
+			productReference = F162DF7D19AEFE8F00C4E755 /* iOSBasicGraphView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F162DF9719AEFE8F00C4E755 /* iOSBasicGraphViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F162DFAC19AEFE9000C4E755 /* Build configuration list for PBXNativeTarget "iOSBasicGraphViewTests" */;
+			buildPhases = (
+				F162DF9419AEFE8F00C4E755 /* Sources */,
+				F162DF9519AEFE8F00C4E755 /* Frameworks */,
+				F162DF9619AEFE8F00C4E755 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F162DF9E19AEFE9000C4E755 /* PBXTargetDependency */,
+			);
+			name = iOSBasicGraphViewTests;
+			productName = iOSBasicGraphViewTests;
+			productReference = F162DF9819AEFE8F00C4E755 /* iOSBasicGraphViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F162DF7519AEFE8F00C4E755 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = WN;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Woonohyo;
+				TargetAttributes = {
+					F162DF9719AEFE8F00C4E755 = {
+						TestTargetID = F162DF7C19AEFE8F00C4E755;
+					};
+				};
+			};
+			buildConfigurationList = F162DF7819AEFE8F00C4E755 /* Build configuration list for PBXProject "iOSBasicGraphView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F162DF7419AEFE8F00C4E755;
+			productRefGroup = F162DF7E19AEFE8F00C4E755 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F162DF7C19AEFE8F00C4E755 /* iOSBasicGraphView */,
+				F162DF9719AEFE8F00C4E755 /* iOSBasicGraphViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F162DF7B19AEFE8F00C4E755 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F162DF8B19AEFE8F00C4E755 /* InfoPlist.strings in Resources */,
+				F162DF9319AEFE8F00C4E755 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F162DF9619AEFE8F00C4E755 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F162DFA419AEFE9000C4E755 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F162DF7919AEFE8F00C4E755 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F162DFB819AEFF2200C4E755 /* WNDataModel.m in Sources */,
+				F162DF8D19AEFE8F00C4E755 /* main.m in Sources */,
+				F162DF9119AEFE8F00C4E755 /* WNAppDelegate.m in Sources */,
+				F162DFB519AEFEBF00C4E755 /* WNMainViewController.m in Sources */,
+				F162DFBB19AF01DD00C4E755 /* WNBarGraphView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F162DF9419AEFE8F00C4E755 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F162DFA619AEFE9000C4E755 /* iOSBasicGraphViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F162DF9E19AEFE9000C4E755 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F162DF7C19AEFE8F00C4E755 /* iOSBasicGraphView */;
+			targetProxy = F162DF9D19AEFE9000C4E755 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F162DF8919AEFE8F00C4E755 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F162DF8A19AEFE8F00C4E755 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F162DFA219AEFE9000C4E755 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F162DFA319AEFE9000C4E755 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F162DFA719AEFE9000C4E755 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F162DFA819AEFE9000C4E755 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F162DFAA19AEFE9000C4E755 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSBasicGraphView/iOSBasicGraphView-Prefix.pch";
+				INFOPLIST_FILE = "iOSBasicGraphView/iOSBasicGraphView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F162DFAB19AEFE9000C4E755 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSBasicGraphView/iOSBasicGraphView-Prefix.pch";
+				INFOPLIST_FILE = "iOSBasicGraphView/iOSBasicGraphView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F162DFAD19AEFE9000C4E755 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iOSBasicGraphView.app/iOSBasicGraphView";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSBasicGraphView/iOSBasicGraphView-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "iOSBasicGraphViewTests/iOSBasicGraphViewTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F162DFAE19AEFE9000C4E755 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iOSBasicGraphView.app/iOSBasicGraphView";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSBasicGraphView/iOSBasicGraphView-Prefix.pch";
+				INFOPLIST_FILE = "iOSBasicGraphViewTests/iOSBasicGraphViewTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F162DF7819AEFE8F00C4E755 /* Build configuration list for PBXProject "iOSBasicGraphView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F162DFA719AEFE9000C4E755 /* Debug */,
+				F162DFA819AEFE9000C4E755 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F162DFA919AEFE9000C4E755 /* Build configuration list for PBXNativeTarget "iOSBasicGraphView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F162DFAA19AEFE9000C4E755 /* Debug */,
+				F162DFAB19AEFE9000C4E755 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F162DFAC19AEFE9000C4E755 /* Build configuration list for PBXNativeTarget "iOSBasicGraphViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F162DFAD19AEFE9000C4E755 /* Debug */,
+				F162DFAE19AEFE9000C4E755 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F162DF7519AEFE8F00C4E755 /* Project object */;
+}
