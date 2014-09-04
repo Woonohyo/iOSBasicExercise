@@ -84,8 +84,6 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     if ( [keyPath isEqualToString:@"rspValue"] ) {
-        NSLog(@"KVO: rspValue Changed");
-        NSLog(@"%@", [change valueForKey:@"new"]);
         [self changeRSPImage];
     }
 }
